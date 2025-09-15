@@ -1,0 +1,32 @@
+{
+    "observation": [
+        "left_rgb",
+        "left_depth",
+        "middle_rgb",
+        "middle_depth",
+        "right_rgb",
+        "right_depth",
+        "left_arm",
+        "right_arm",
+        "left_camera_intrinsic",
+        "middle_camera_intrinsic",
+        "right_camera_intrinsic"
+    ],
+    "left_arm_control_topic": "/left_joint_ctrl",
+    "right_arm_control_topic": "/right_joint_ctrl",
+    "left_arm_state_topic": "/left_joint_states",
+    "right_arm_state_topic": "/right_joint_states",
+    "left_rgb_topic": "/left_camera/color/image_raw",
+    "left_depth_topic": "/left_camera/aligned_depth_to_color/image_raw",
+    "middle_rgb_topic": "/middle_camera/color/image_raw",
+    "middle_depth_topic": "/middle_camera/aligned_depth_to_color/image_raw",
+    "right_rgb_topic": "/right_camera/color/image_raw",
+    "right_depth_topic": "/right_camera/aligned_depth_to_color/image_raw",
+    "left_camera_instrinsics_topic": "/left_camera/color/camera_info",
+    "middle_camera_instrinsics_topic": "/middle_camera/color/camera_info",
+    "right_camera_instrinsics_topic": "/right_camera/color/camera_info",
+    "instruction": "Place the blocks into the slot with the matching shape.",
+    "server_url": "http://localhost:2000/your_server_name",
+    "control_frequency": 25,
+    "infer_frequency": 1.0
+}

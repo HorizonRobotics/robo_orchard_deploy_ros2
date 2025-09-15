@@ -1,0 +1,10 @@
+sshkeyboard
+pydantic
+flask
+gevent
+numpy<=2
+scipy
+requests
+pre-commit
+pre-commit-hooks
+setuptools>=77.0.3,<80.0.0
