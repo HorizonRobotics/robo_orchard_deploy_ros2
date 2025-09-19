@@ -3,6 +3,6 @@
     "robot_name": "left_arm",
     "camera_name": "left_camera",
     "aruco_marker_pose_topic_name": "/aruco_single/pose",
-    "end_effector_pose_topic_name": "/left_arm/joint_states",
+    "end_effector_pose_topic_name": "/left_arm/end_pose",
     "result_file": "left_camera_to_left_ee.json"
 }
