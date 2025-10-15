@@ -38,7 +38,10 @@ class ModelInference:
         # Load your model here
         class FakeModel:
             def infer(self, input_data):
-                return {"action": None}
+                # make sure it's a action chunk list with shape (num_steps, action_dim) # noqa E501
+                # list is used for json serialization
+                actions = [[0.0] * 14 for _ in range(64)]
+                return actions
 
         self.model = FakeModel()
         logger.info("Model loaded successfully.")
@@ -137,7 +140,7 @@ def model_infer():
             json.dumps(actions),
         )
     except Exception as e:
-        logging.error(f"Error in /sem endpoint: {e}")
+        logging.error(f"Error in endpoint: {e}")
         return jsonify({"error": str(e)}), 500
 
 

@@ -21,14 +21,15 @@ This is the core of this ros2 package. It will handles and records the low-level
 ### Running an Example
 
 After successful installation, you can modify the example config file and run the example to run real robot inference.
-1. Run deploy node  
-You should run your model server in actual port, we give a example in `example/robo_orchard_deploy/model_infer_server.py`
-2. Make your own deploy config  
-You should make your own config corresponding to your model, we give a example in `example/robo_orchard_deploy/robo_orchard_deploy_example.json`.  
-3. Run robo_orchard_deploy
-```bash
-ros2 launch robo_orchard_deploy launch_dual_arm_sync_deployment.launch.py config_file:=example/robo_orchard_deploy/robo_orchard_deploy_example.json
-```
+1. Start Model server. 
+  - You should run your model server in actual port, we give a example in `example/robo_orchard_deploy/model_infer_server.py`  
+2. Run robo_orchard_deploy node  
+  - Firstly, you should make your own config corresponding to your model server, we give a example in `example/robo_orchard_deploy/robo_orchard_deploy_example.json`  
+
+  - Then start the deploy node
+    ```bash
+    ros2 launch robo_orchard_deploy launch_dual_arm_sync_deployment.launch.py config_file:=example/robo_orchard_deploy/robo_orchard_deploy_example.json
+    ```
 
 ## License
 
